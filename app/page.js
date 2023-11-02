@@ -7,11 +7,11 @@ function HomePage() {
                 
                 <h1 className="text-3xl font-bold text-white mb-8">BookYatra</h1>
                 <nav className="flex space-x-6">
-                    <a href="" className="text-white transform transition-transform duration-300 hover:scale-110">Home</a>
-                    <a href="#" className="text-white transform transition-transform duration-300 hover:scale-110">Flight Booking</a>
+                    <Link href="./flight" className="text-white transform transition-transform duration-300 hover:scale-110">Home</Link>
+                    <Link href="./flight" className="text-white transform transition-transform duration-300 hover:scale-110">Flight Booking</Link>
                     <Link href="./hotel" className="text-white transform transition-transform duration-300 hover:scale-110">Hotel Booking</Link>
-                    <a href="#" className="text-white transform transition-transform duration-300 hover:scale-110">Setting</a>
-                    <a href="#" className="text-white transform transition-transform duration-300 hover:scale-110">Profile</a>
+                    <Link href="./setting" className="text-white transform transition-transform duration-300 hover:scale-110">Setting</Link>
+                    <Link href="./profile" className="text-white transform transition-transform duration-300 hover:scale-110">Profile</Link>
                 </nav>
             </header>
 
