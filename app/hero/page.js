@@ -137,7 +137,7 @@ function Hero() {
             hotelName="Mountain Retreat"
             address="Himalayas,India"
             price="$80"
-            rating="4.5/5"
+            rating="4/5"
         />
         
     </div>

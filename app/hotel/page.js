@@ -30,7 +30,7 @@ export default function HotelLookup() {
                 { title: 'Average Rate', value: '$120/night', desc: 'Based on recent bookings' },
                 { title: 'Guest Satisfaction', value: '92%', desc: 'Based on feedback' }
             ],
-            rating: 4.0
+            rating: 4.5
         },
         {
             name: 'Sunny Resort',
