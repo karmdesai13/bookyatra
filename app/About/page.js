@@ -3,20 +3,16 @@
 
 
 export default function About() {
-    // Sample data for team members and testimonials
+    
     const teamMembers = [
-        { name: 'Karm Desai', role: 'Lead Developer', imageUrl: 'path/to/image' },
-        { name: 'Zainul Malik', role: 'Lead Developer', imageUrl: 'path/to/image' },
-        { name: 'Prit Patel', role: 'Lead Developer', imageUrl: 'path/to/image' },
-        { name: 'Mosmee Desai', role: 'Lead Developer', imageUrl: 'path/to/image' },
-        { name: 'Sourabh Thakur', role: 'Lead Developer', imageUrl: 'path/to/image' },
+        { name: 'Karm Desai', role: 'Lead Developer', imageUrl: "./images/Profile.png" },
+        { name: 'Zainul Malik', role: 'Lead Developer', imageUrl: "./images/Profile.png" },
+        { name: 'Prit Patel', role: 'Lead Developer', imageUrl: "./images/Profile.png" },
+        { name: 'Mosmee Desai', role: 'Lead Developer', imageUrl: "./images/Profile2.png" },
+        { name: 'Sourabh Thakur', role: 'Lead Developer', imageUrl: "./images/Profile.png" },
     ];
 
-    const testimonials = [
-        { author: 'John Doe', comment: 'Amazing experience, never had a smoother trip!' },
-        { author: 'Jane Smith', comment: 'Customer service was outstanding, highly recommended.' },
-        { author: 'Emily Johnson', comment: 'A travel company that truly cares about its customers.' }
-    ];
+   
 
     return (
         <div className="about-us">
@@ -51,7 +47,7 @@ export default function About() {
                         {teamMembers.map((member, index) => (
                             <div key={index} className="card w-96 bg-base-100 shadow-xl m-4">
                                 <figure className="px-10 pt-10">
-                                    <img src="./images/Profile.png" alt={member.name} className="rounded-full" />
+                                    <img src={member.imageUrl} alt={member.name} className="rounded-full" />
                                 </figure>
                                 <div className="card-body items-center text-center">
                                     <h2 className="card-title">{member.name}</h2>
@@ -62,21 +58,7 @@ export default function About() {
                     </div>
                 </div>
 
-                <div className="text-center p-4">
-                    <h2 className="text-3xl font-bold mb-2">Testimonials</h2>
-                    <div className="flex flex-wrap justify-center">
-                        {testimonials.map((testimonial, index) => (
-                            <div key={index} className="card w-96 bg-base-100 shadow-xl m-4">
-                                <div className="card-body">
-                                    <p>{testimonial.comment}</p>
-                                    <div className="card-actions justify-end">
-                                        <div className="badge badge-outline">{testimonial.author}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+             
             </div>
         </div>
     );
