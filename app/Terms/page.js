@@ -14,7 +14,7 @@ export default function TermsOfUse() {
                     <p>All contents of the site, including but not limited to text, design, and images, are owned by BookYatra or its content providers.</p>
 
                     <h2 className="text-2xl font-semibold mb-4 mt-6">4. Disclaimer of Warranties</h2>
-                    <p>The website and its content are provided on an "as is" basis. BookYatra makes no warranties regarding the accuracy or completeness of any content.</p>
+                   <p>The website and its content are provided on an &quot;as is&quot; basis. BookYatra makes no warranties regarding the accuracy or completeness of any content.</p>
 
                     <h2 className="text-2xl font-semibold mb-4 mt-6">5. Limitation of Liability</h2>
                     <p>BookYatra will not be liable for any indirect, incidental, or punitive damages arising out of your use or inability to use the website.</p>
