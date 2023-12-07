@@ -230,20 +230,15 @@ export default function HotelLookup() {
             backgroundPosition: 'center',
         }}>
             <Header/>
+            <h1 className='text-7xl mb-3 ml-2 font-bold'>
+                    <span className='text-white'>Book</span>
+                    <span className='text-blue-500'>Yatra</span>
+                </h1>
 
           
             
 
-            <div className="p-5 bg-slate-800 w-full max-w-7xl rounded-lg shadow-lg mb-8 flex justify-between items-center">
-            <input
-            type="text"
-            placeholder="Search for a hotel..."
-            className="border-2 border-black p-2 flex-1 rounded-lg mr-6 focus:border-blue-500 focus:outline-none transition-border duration-300" 
-            value={searchTerm}
-            onChange={e => setSearchTerm(e.target.value)}
-            />
-            <button className="bg-blue-500 text-white p-2 px-5 rounded-lg transform transition-transform duration-300 hover:scale-105">Search</button>
-            </div>
+           
 
             
 
