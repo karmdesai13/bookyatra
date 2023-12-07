@@ -9,10 +9,12 @@ export default function LogIn() {
     const handleSubmit = (event) => {
         event.preventDefault();
         if (!email || !password) {
-            setError('Please enter both email and password');
+            setError("Please enter both email and password");
             return;
         }
         
+        // Assuming login is successful, reset the form
+        // Add logic here to handle unsuccessful login attempts
         console.log('Logging in with', email, password);
         setEmail('');
         setPassword('');
@@ -64,7 +66,7 @@ export default function LogIn() {
                             <button className="btn bg-blue-600 hover:bg-blue-700 text-white">Login</button>
                         </div>
                         <div className="form-control mt-4 text-center">
-                            <p className="text-gray-300">Don't have an account? <a href="./SignUp" className="text-blue-500 hover:text-blue-300">Sign up</a></p>
+                            <p className="text-gray-300">Dont have an account? <a href="./SignUp" className="text-blue-500 hover:text-blue-300">Sign up</a></p>
                         </div>
                     </form>
                 </div>
