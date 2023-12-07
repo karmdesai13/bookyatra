@@ -1,3 +1,4 @@
+"use client";
 
 function ProfilePage() {
    const userProfile = {
@@ -43,7 +44,7 @@ function ProfilePage() {
                 </div>
             </div>
         </div>
-       
+    ); 
 }
 
 export default ProfilePage;
