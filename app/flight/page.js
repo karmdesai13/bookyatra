@@ -1,7 +1,9 @@
 "use client"
+import { useState } from 'react';
+import Header from '../header/page';
 
 function FlightLookup() {
-   const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState('');
 
     const flights = [
         {
@@ -128,7 +130,7 @@ function FlightLookup() {
             <div className="fixed top-0 left-0 right-0 bottom-0 bg-black bg-opacity-50 text-xl flex items-center justify-center z-50">
                 <div key={flight.id} className="rounded-lg h-auto w-[900px] shadow-lg shadow-black p-6 hover:shadow-xl hover:shadow-white transform hover:-translate-y-1 transition-all duration-300"
                 style={{
-                    backgroundImage: url("${backgroundImages[flight.id]}"),
+                    backgroundImage: `url("${backgroundImages[flight.id]}")`,
                     backgroundSize: 'cover',
                     backgroundPosition: 'center',
                 }}>
@@ -230,7 +232,7 @@ function FlightLookup() {
                     {filteredFlights.map(flight => (
                         <div key={flight.id} className="bg-white rounded-lg w-[460px] shadow-md shadow-white p-6 hover:shadow-xl hover:shadow-white transform hover:-translate-y-1 transition-all duration-300"
                         style={{
-                            backgroundImage: url("${backgroundImages[flight.id]}"),
+                            backgroundImage: `url("${backgroundImages[flight.id]}")`,
                             backgroundSize: 'cover',
                             backgroundPosition: 'center',
                             height: '250px', 
@@ -256,7 +258,8 @@ function FlightLookup() {
                     ))}
                 </div>
             </div>
-        </div>
+        </div>
+    );
 }
 
 export default FlightLookup;
