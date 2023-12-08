@@ -1,5 +1,5 @@
 "use client";
-
+import Header from "../header/page";
 
 
 export default function About() {
@@ -15,14 +15,20 @@ export default function About() {
    
 
     return (
-        <div className="about-us">
+        <div className="about-us" >
+            <div style={{ backgroundColor: '#0d253f' }} className="m-0">
+            <Header/>
+            
             <div className="hero min-h-screen" style={{ backgroundColor: '#0d253f' }}>
+            
                 <div className="hero-content text-center text-white">
+                    
                     <div className="max-w-md">
                         <h1 className="text-5xl font-bold">About Us</h1>
                         <p className="py-6">We are passionate about providing the best travel experience for our customers. Discover how we make your trips memorable.</p>
                     </div>
                 </div>
+            </div>
             </div>
 
             <div className="container mx-auto p-6">
@@ -58,7 +64,7 @@ export default function About() {
                     </div>
                 </div>
 
-             
+                
             </div>
         </div>
     );

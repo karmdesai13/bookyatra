@@ -1,6 +1,8 @@
-
+import Header from "../header/page";
 export default function TermsOfUse() {
+    return(
    <div className="terms-of-use-page min-h-screen bg-gray-800">
+    <Header/>
             <div className="container mx-auto p-6">
                 <h1 className="text-4xl font-bold text-center text-white mb-6">Terms of Use</h1>
                 <div className="bg-white p-6 rounded-lg shadow-md">
@@ -30,5 +32,6 @@ export default function TermsOfUse() {
                 </div>
             </div>
         </div>
+    );
 
 }
