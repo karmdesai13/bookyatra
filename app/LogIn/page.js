@@ -1,34 +1,38 @@
 "use client";
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { useState } from 'react';
+import { auth } from '../firebaseConfig';
 
 export default function LogIn() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
 
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         if (!email || !password) {
             setError("Please enter both email and password");
             return;
         }
         
-        // Assuming login is successful, reset the form
-        // Add logic here to handle unsuccessful login attempts
-        console.log('Logging in with', email, password);
-        setEmail('');
-        setPassword('');
-        setError('');
+        try {
+            
+            await signInWithEmailAndPassword(auth, email, password);
+            console.log('Logged in successfully');
+            
+            window.location.href = './hero';
+        } catch (error) {
+            console.error('Error logging in:', error);
+            setError(error.message);
+        }
     };
 
     return (
         <div className="hero min-h-screen" style={{backgroundImage: 'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)'}}>
-        
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className="text-center lg:text-left">
                     <h1 className='text-7xl text-white'>Book<span className='text-blue-700'>Yatra</span></h1>
                     <h1 className="text-5xl m-2 font-bold text-white">Login now!</h1>
-                    
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm bg-gray-700 shadow-2xl">
                     <form className="card-body" onSubmit={handleSubmit}>
@@ -74,5 +78,3 @@ export default function LogIn() {
         </div>
     );
 }
-
-
